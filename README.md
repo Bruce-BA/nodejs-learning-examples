@@ -1,4 +1,4 @@
-## nodejs-learning-examples
+## NodeJS learning examples
 
 sample projects to learn nodejs.
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
