@@ -41,7 +41,7 @@ async function query(id) {
      return result.recordset;
  }
  catch(error)
- {console.log(`query error : ${error}`);}
+ {console.log(`query error : ${error}`);  }
   
 }
 
