@@ -5,7 +5,7 @@ sample projects to learn nodejs.
 ![GitHub](https://img.shields.io/github/license/bilaldevelop/nodejs-learning-examples?color=yellow&label=MIT&style=plastic)
 
  
-## how can i use
+## Techniques Used in Development
 
 
 **1. create-server**
