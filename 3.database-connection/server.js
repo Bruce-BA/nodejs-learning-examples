@@ -33,15 +33,10 @@ http.createServer(function (req, res) {
   console.log('requiredQueryString :');
   console.log(requiredQueryString);
 
-  //example spilt string
-  var str = "/de/about";
-  var path = str.split("/");
-  console.log(path); // path = [ '', 'de', 'about' ]
-  // path[1] = 'de', path[2] = 'about'
 
 
-  var pathnames = parsedRouteUrl.pathname.split('/');
-  var parametres = pathnames.filter(n => n != '');
+  var pathnames = parsedRouteUrl.pathname.split('/'); // ['','student','1']
+  var parametres = pathnames.filter(n => n != ''); // ['student','1']
   console.log('pathnames :' + pathnames);
   console.log('parametres :' + parametres);
 
