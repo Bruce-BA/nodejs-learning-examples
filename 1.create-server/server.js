@@ -2,7 +2,7 @@
 
 let http = require('http'); // Import Nodlete.js core module
 var fs = require('fs');
-var sys = require('util');
+
 var counter = 0;
 
 var server = http.createServer(
