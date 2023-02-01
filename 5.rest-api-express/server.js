@@ -1,6 +1,10 @@
+var appRoot = require('app-root-path');
+const path = require('path');
+
 var express=require('express');
 var app=express();
 var fs = require("fs");
+
 
 var db=require('./service/database');
 
@@ -15,9 +19,12 @@ var user = {
    }
 }
 
+// public permisssion
+app.use('/public', express.static('public'));
 
 app.get('/',(req,res)=>{ 
-    res.end( 'server on working!');
+   // res.end( 'server on working!');
+   res.sendFile(__dirname + "/views/" + "index.html");
  });
 
 

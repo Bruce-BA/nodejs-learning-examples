@@ -1,0 +1,98 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="/public/js/jquery-3.6.3.min.js"></script>
+  <link rel="/public/css/app.css" href="styles.css">
+
+  <style type="text/css">
+    .main {
+      width: 800px;
+      margin: 100px auto;
+      padding-bottom: 200px;
+      ;
+    }
+
+    .result {
+      color: white;
+      display: none;
+      padding: 30px;
+
+      background-color: #71cfa4;
+    }
+
+    input {
+      width: 150px;
+      height: 40px;
+    }
+
+    form {
+      background-color: aqua;
+      padding: 30px;
+    }
+  </style>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      $("#btn_adduser").click(function () {
+        // alert('call ajax method success!');
+        $.post("/addUser", function (data, status) {
+          // alert("Data: " + data + "\nStatus: " + status);
+          // $("#result").fadeOut();
+          $("#result").fadeOut(1000)
+          $('#result').text(JSON.stringify(JSON.parse(data), undefined, 2));
+          $("#result").fadeIn(1000);
+        });
+
+
+
+        // fetch('/addUser', {
+        //   method: 'POST',
+        //   headers: {
+        //     'Accept': 'application/json',
+        //     'Content-Type': 'application/json'
+        //   },
+        //   body: JSON.stringify({ "id": 78912 })
+        // })
+        //   .then(response => response.json())
+        //   .then(response => console.log(JSON.stringify(response)))
+
+
+
+      });
+
+    });
+
+
+  </script>
+
+
+</head>
+
+<body>
+  <div class="main">
+
+    <p>Form action</p>
+    <form action="/addUser" method="post">
+
+      <input type="submit" value="Submit">
+    </form>
+
+    <div>
+      <p>Ajax action</p>
+      <input type="submit" id="btn_adduser" value="Submit Ajax">
+      <p>Result</p>
+      <pre id="result" class="result"></pre>
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
