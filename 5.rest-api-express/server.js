@@ -2,17 +2,17 @@ var appRoot = require('app-root-path');
 const path = require('path');
 
 var express=require('express');
-var app=express();
+var app = express();
 var fs = require("fs");
 
 
-var db=require('./service/database');
+var db = require('./service/database');
 
 
 
 var user = {
    "user4" : {
-      "name" : "mohit",
+      "name" : "adil",
       "password" : "123456",
       "profession" : "teacher",
       "id": 4
@@ -21,6 +21,7 @@ var user = {
 
 // public permisssion
 app.use('/public', express.static('public'));
+//app.use('/resource', express.static('resource'));
 
 app.get('/',(req,res)=>{ 
    // res.end( 'server on working!');
@@ -33,11 +34,12 @@ app.post('/addUser', function (req, res) {
    fs.readFile( __dirname + "/" + "resource/data/users.json", 'utf8', function (err, data) {
     console.log('-----------------');
       console.log(data);
-      data = JSON.parse( data );
-      data["user4"] = user["user4"];
+      temp = JSON.parse( data );
+
+      temp["user4"] = user["user4"];
       console.log('/////////////////');
-      console.log( data );
-      res.end( JSON.stringify(data));
+      console.log( temp );
+      res.end( JSON.stringify(temp));
    });
 })
 

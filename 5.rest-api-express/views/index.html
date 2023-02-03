@@ -42,11 +42,11 @@
       $("#btn_adduser").click(function () {
         // alert('call ajax method success!');
         $.post("/addUser", function (data, status) {
-          // alert("Data: " + data + "\nStatus: " + status);
-          // $("#result").fadeOut();
-          $("#result").fadeOut(1000)
-          $('#result').text(JSON.stringify(JSON.parse(data), undefined, 2));
-          $("#result").fadeIn(1000);
+           alert("Data: " + data + "\nStatus: " + status);
+         
+          // $("#result").fadeOut(1000)
+          // $('#result').text(JSON.stringify(JSON.parse(data), undefined, 2));
+          // $("#result").fadeIn(1000);
         });
 
 
@@ -68,6 +68,9 @@
 
     });
 
+ 
+
+
 
   </script>
 
@@ -78,7 +81,7 @@
   <div class="main">
 
     <p>Form action</p>
-    <form action="/addUser" method="post">
+    <form action="/addUser" method="POST">
 
       <input type="submit" value="Submit">
     </form>
