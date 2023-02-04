@@ -7,6 +7,8 @@
   <title>Document</title>
 
   <script src="/public/js/jquery-3.6.3.min.js"></script>
+
+  <script src="/public/js/app.js"></script>
   <link rel="/public/css/app.css" href="styles.css">
 
   <style type="text/css">
@@ -34,45 +36,26 @@
       background-color: aqua;
       padding: 30px;
     }
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
   </style>
 
-  <script type="text/javascript">
-    $(document).ready(function () {
 
-      $("#btn_adduser").click(function () {
-        // alert('call ajax method success!');
-        $.post("/addUser", function (data, status) {
-           alert("Data: " + data + "\nStatus: " + status);
-         
-          // $("#result").fadeOut(1000)
-          // $('#result').text(JSON.stringify(JSON.parse(data), undefined, 2));
-          // $("#result").fadeIn(1000);
-        });
-
-
-
-        // fetch('/addUser', {
-        //   method: 'POST',
-        //   headers: {
-        //     'Accept': 'application/json',
-        //     'Content-Type': 'application/json'
-        //   },
-        //   body: JSON.stringify({ "id": 78912 })
-        // })
-        //   .then(response => response.json())
-        //   .then(response => console.log(JSON.stringify(response)))
-
-
-
-      });
-
-    });
-
- 
-
-
-
-  </script>
 
 
 </head>
@@ -90,7 +73,32 @@
       <p>Ajax action</p>
       <input type="submit" id="btn_adduser" value="Submit Ajax">
       <p>Result</p>
-      <pre id="result" class="result"></pre>
+
+      <pre id="result" class="result">
+
+      </pre>
+
+      <table style="width:100%">
+        <tr class="table-header">
+          <td>name</td>
+          <td>password</td>
+          <td>professional</td>
+          <td>id</td>
+        </tr>
+
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+
+
+      </table>
+      </br></br></br>
+
+      <div id="test"></div>
+
     </div>
 
   </div>
