@@ -13,17 +13,22 @@
 
   <style type="text/css">
     .main {
-      width: 800px;
-      margin: 100px auto;
-      padding-bottom: 200px;
-      ;
+      width: 80%;
+    margin: 100px auto;
+    /* padding-bottom: 200px; */
+    /* background-color: #f7f7f7; */
+    padding: 15px;
     }
+    .title{font-size: 17pt;
+    /* font-style: italic; */
+    font-weight: 600;
+    font-family: arial;}
 
     .result {
       color: white;
       display: none;
       padding: 30px;
-
+margin: 0;
       background-color: #71cfa4;
     }
 
@@ -33,13 +38,28 @@
     }
 
     form {
-      background-color: aqua;
-      padding: 30px;
+      background-color: #f5f5f5;
+    padding: 30px;
+    /* border: 1px solid red; */
+    border-radius: 8px;
     }
+
+    .continer{display: flex;}
+    .item-same-width{flex:1;margin: 5px;}
+
+ .table-header{
+  border-radius: 8px;
+    background-color: #529576;
+    color: white;
+    font-weight: 600;
+ }
 
     table {
       font-family: arial, sans-serif;
-      border-collapse: collapse;
+      border-collapse: collapse; 
+        border-radius: 8px;
+        border-style: hidden; /* hide standard table (collapsed) border */
+        box-shadow: 0 0 0 1px #71cfa4; /* this draws the table border  */ 
       width: 100%;
     }
 
@@ -63,41 +83,36 @@
 <body>
   <div class="main">
 
-    <p>Form action</p>
+    <p class="title">Form action</p>
+    <hr/>
     <form action="/addUser" method="POST">
 
       <input type="submit" value="Submit">
     </form>
 
     <div>
-      <p>Ajax action</p>
+      <p class="title">Ajax action</p>
+      <hr/>
       <input type="submit" id="btn_adduser" value="Submit Ajax">
       <p>Result</p>
+    </div>
+    <div class="continer">
+     
 
-      <pre id="result" class="result">
+      <div class="item-same-width">
+          <pre id="result" class="result">
 
       </pre>
+      </div>
+      <div class="item-same-width">
+         
 
-      <table style="width:100%">
-        <tr class="table-header">
-          <td>name</td>
-          <td>password</td>
-          <td>professional</td>
-          <td>id</td>
-        </tr>
-
-        <tr>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
-        </tr>
-
-
-      </table>
-      </br></br></br>
 
       <div id="test"></div>
+      </div>
+    
+
+     
 
     </div>
 
