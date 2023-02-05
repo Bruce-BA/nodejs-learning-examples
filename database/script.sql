@@ -1,3 +1,10 @@
+/*    ==Scripting Parameters==
+
+    Source Server Version : SQL Server 2016 (13.0.4259)
+    
+*/
+
+
 /****** Object:  Table [dbo].[department]    Script Date: 2/5/2023 3:31:06 AM ******/
 SET ANSI_NULLS ON
 GO
