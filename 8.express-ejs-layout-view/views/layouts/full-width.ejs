@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #F8F9FA;
+            padding: 7px;
+        }
+
+        .content {
+            display: flex;
+            ;
+            background-color: #E9ECEF;
+        }
+
+        header h1 {
+            color: #c1c1c1;
+            font-family: Arial;
+        }
+
+        .data-container {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .table-header {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #6bacb3;
+            color: white;
+        }
+
+        table {
+            margin: 10px;
+            font-family: sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table td,
+        table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        table tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header>
+            <h1>Home Page</h1>
+        </header>
+        <div class="content">
+            <%- body %>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

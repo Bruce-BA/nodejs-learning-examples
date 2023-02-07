@@ -24,8 +24,8 @@ app.use('/public', express.static('public'));
 //app.use('/resource', express.static('resource'));
 
 app.get('/',(req,res)=>{ 
-   // res.end( 'server on working!');
-   res.sendFile(__dirname + "/views/" + "index.html");
+    res.end( 'server on working!');
+  // res.sendFile(__dirname + "/views/" + "index.html");
  });
 
 
@@ -47,7 +47,7 @@ app.get('/students',(req,res)=>{
    db.queryall().then( result =>{
    res.send(result);
    console.log(result);
-   })
+   });
 });
 
 

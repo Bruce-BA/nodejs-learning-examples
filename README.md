@@ -13,6 +13,8 @@ sample projects to learn nodejs.
    
 **2. custom-routing**
    - using NodeJS `http, fs` core package solve routing process.
-   
+
+**7. express-ejs-view**
+   - using NodeJS `express, path`  packages. nodejs beginner course #7 - how to render `HTML` files in node js application in `server side`.
 
 

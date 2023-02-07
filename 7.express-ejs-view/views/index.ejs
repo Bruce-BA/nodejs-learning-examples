@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+       // alert('front-end test code!');
+
+    </script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #001fff;
+            padding: 10px;
+        }
+
+        header h1 {
+            color: white;
+            font-family: Arial;
+        }
+
+        .data-container {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .table-header {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        table {
+            margin: 10px;
+            font-family: sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table td,
+        table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        table tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Home Page</h1>
+    </header>
+
+    <!-- <%= JSON.stringify(data) %> -->
+
+    <div class="data-container">
+
+        <table style="width:100%">
+            <tr class="table-header">
+                <td>name</td>
+                <td>department</td>
+                <td>id</td>
+            </tr>
+            <% data.forEach((element, index)=> { console.log(element); %>
+                <tr>
+                    <td>
+                        <%= element.student_name %>
+                    </td>
+                    <td>
+                        <%=element.department %>
+                    </td>
+                    <td>
+                        <%=element.id %>
+                    </td>
+                </tr>
+                <% }); %>
+
+        </table>
+    </div>
+</body>
+
+</html>

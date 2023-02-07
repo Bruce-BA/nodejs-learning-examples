@@ -1,0 +1,27 @@
+
+    <!-- <%= JSON.stringify(data) %> -->
+
+    <div class="data-container">
+
+        <table style="width:100%">
+            <tr class="table-header">
+                <td>name</td>
+                <td>department</td>
+                <td>id</td>
+            </tr>
+            <% data.forEach((element, index)=> { console.log(element); %>
+                <tr>
+                    <td>
+                        <%= element.student_name %>
+                    </td>
+                    <td>
+                        <%=element.department %>
+                    </td>
+                    <td>
+                        <%=element.id %>
+                    </td>
+                </tr>
+                <% }); %>
+
+        </table>
+    </div>
