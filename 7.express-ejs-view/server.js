@@ -5,13 +5,11 @@ var db = require('./service/database');
 
 var app = express();
 
-// __dirname 
+// __dirname value is related path '/8.express-ejs-layout-view/server.js/'
 app.set('views', path.join(__dirname, 'views'));
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
-// use res.render to load up an ejs view file
-//app.use(expressLayouts);
 
 
  
@@ -19,17 +17,19 @@ app.set('view engine', 'ejs');
 // index page
 app.get('/', function (req, res) {
 
+  var obj= {name:'rrr',age:20}
   //data transfer to index page
-  db.queryall().then(result => {
-    //res.send(result);
-    console.log('result display promise:');
-    console.log(result);
-    console.log('render index:');
-    
-    res.render('index',{data:result});
+  db.queryall().then(result => { 
+    var x= {title:'backend datatransfer ',data : result};
+    res.render('index',x); 
   });
   
 });
+
+ 
+
+
+
 
 // about page
 app.get('/about', function (req, res) {

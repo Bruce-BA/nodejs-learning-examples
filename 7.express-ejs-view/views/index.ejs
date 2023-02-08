@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title><%= title %></title>
+ 
     <script type="text/javascript">
        // alert('front-end test code!');
 
@@ -65,7 +65,7 @@
 
 <body>
     <header>
-        <h1>Home Page</h1>
+        <h1>Home Page </h1>
     </header>
 
     <!-- <%= JSON.stringify(data) %> -->
@@ -78,6 +78,24 @@
                 <td>department</td>
                 <td>id</td>
             </tr>
+            <tr>
+                <td>bilal</td>
+                <td>cs</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>semet</td>
+                <td>nodejs</td>
+                <td>2</td>
+            </tr>
+            <%  for(let i = 0; i < 5; i++) { %>
+                 <h4> <%=  i %>  </h4> 
+            <% } %>
+
+ 
+
+
+
             <% data.forEach((element, index)=> { console.log(element); %>
                 <tr>
                     <td>
